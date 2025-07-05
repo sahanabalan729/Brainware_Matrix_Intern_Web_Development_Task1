@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Day Planner</title>
+  <link rel="stylesheet" href="style.css" />    
+</head>
+<body class="light-mode">
+  <div class="app">
+    <header>
+      <h1>📅 Smart Day Planner</h1>
+      <input type="date" id="date-picker" />
+      <select id="theme-selector">
+        <option value="light">☀️ Light</option>
+        <option value="dark">🌙 Dark</option>
+        <option value="solarized">🧡 Solarized</option>
+      </select>
+    </header>
+
+    <div id="countdown-timer">⏱️ Countdown: --</div>
+
+    <section class="planner">
+      <div class="to-do">
+        <h2>📝 To-Do List</h2>
+        <select id="task-category">
+          <option value="Work">🖥️ Work</option>
+          <option value="Study">📚 Study</option>
+          <option value="Hobby">🎨 Hobby</option>
+          <option value="Personal">❤️ Personal</option>
+          <option value="Other">🗂️ Other</option>
+        </select>
+        <input type="text" id="task-input" placeholder="New task..." />
+        <button id="add-task">Add Task</button>
+        <div id="daily-tasks-container"></div>
+        <div class="progress-bar"><div id="progress-fill"></div></div>
+      </div>
+
+      <div class="events">
+        <h2>📌 Events</h2>
+        <input type="text" id="event-title" placeholder="Event title" />
+        <input type="time" id="event-time" />
+        <button id="add-event">Add Event</button>
+        <div id="daily-events-container"></div>
+      </div>
+
+      <div class="notes">
+        <h2>🗒️ Notes</h2>
+        <input type="text" id="note-input" placeholder="Write a note..." />
+        <button id="add-note">Add Note</button>
+        <ul id="note-list"></ul>
+      </div>
+
+      <!-- 🎉 Mood Tracker Section Inserted Below -->
+      <div class="mood-tracker">
+        <h2>😊 Mood Tracker</h2>
+        <select id="mood-select">
+          <option value="😊 Happy">😊 Happy</option>
+          <option value="😐 Neutral">😐 Neutral</option>
+          <option value="😔 Sad">😔 Sad</option>
+          <option value="😠 Angry">😠 Angry</option>
+          <option value="😴 Tired">😴 Tired</option>
+        </select>
+        <button id="add-mood">Log Mood</button>
+        <ul id="mood-log"></ul>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Smart Planner. All rights reserved.</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
